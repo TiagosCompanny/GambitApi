@@ -6,6 +6,14 @@ namespace GambitApi.Services
     public class CartasService : ICartasService
     {
 
+
+        public List<Carta> GerarBaralho()
+        {
+
+            return new List<Carta>();
+        }
+
+
         public List<Carta> GerarCartasRodadas(int jogadores)
         {
 

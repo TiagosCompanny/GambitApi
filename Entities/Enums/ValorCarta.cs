@@ -2,15 +2,15 @@
 {
     public enum ValorCarta
     {
-        "4" = 0,
-        "5" = 1,
-        "6" = 2,
-        "7" = 3,
-        "Q" = 4,
-        "J" = 5,
-        "K" = 6,
-        "A" = 7,
-        "2" = 8,
-        "3" = 9
+        Quatro = 0,
+        Cinco = 1,
+        Seis = 2,
+        Sete = 3,
+        Dama = 4,
+        Valete = 5,
+        Rei = 6,
+        As = 7,
+        Dois = 8,
+        Tres = 9
     }
 }
