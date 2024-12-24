@@ -1,6 +1,6 @@
 ﻿namespace GambitApi.Entities
 {
-    public class Player
+    public class Jogador
     {
     }
 }

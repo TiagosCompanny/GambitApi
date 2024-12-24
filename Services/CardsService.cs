@@ -3,7 +3,7 @@ using GambitApi.Services.Interfaces;
 
 namespace GambitApi.Services
 {
-    public class CardsService : ICardsService
+    public class CartasService : ICartasService
     {
 
         public List<Carta> GerarCartasRodadas(int jogadores)
