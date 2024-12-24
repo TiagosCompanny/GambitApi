@@ -1,6 +1,7 @@
-﻿namespace GambitApi.Services.Interfaces
+﻿namespace GambitApi.Services.Cards
 {
     public interface ICartasService
     {
+
     }
 }
