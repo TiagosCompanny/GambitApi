@@ -1,7 +1,8 @@
-﻿using Microsoft.Extensions.Logging.Console;
+﻿using GambitApi.Services.Interfaces;
+using Microsoft.Extensions.Logging.Console;
 using System.Reflection.Metadata.Ecma335;
 
-namespace GambitApi.Services.Jogador
+namespace GambitApi.Services
 {
     public class JogadorService : IJogadorService
     {
@@ -23,7 +24,7 @@ namespace GambitApi.Services.Jogador
 
         public int ResponderSolicitacaoAumentoPontuacaoPartida()
         {
-            
+
 
 
 

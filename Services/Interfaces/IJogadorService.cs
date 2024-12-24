@@ -1,4 +1,4 @@
-﻿namespace GambitApi.Services.Jogador
+﻿namespace GambitApi.Services.Interfaces
 {
     public interface IJogadorService
     {

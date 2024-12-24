@@ -7,4 +7,5 @@ public class Equipe
 
     public List<Jogador> Jogadores { get; set; }
 
+    public int Pontos { get; set; }
 }

@@ -1,9 +1,10 @@
 ﻿using GambitApi.Entities;
 using GambitApi.Entities.Enums;
+using GambitApi.Services.Interfaces;
 using System.Collections.Generic;
 using System.IO.Pipelines;
 
-namespace GambitApi.Services.Cards
+namespace GambitApi.Services
 {
     public class CartasService : ICartasService
     {

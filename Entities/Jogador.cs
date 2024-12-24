@@ -2,8 +2,9 @@
 {
     public class Jogador
     {
-        public int Codigo { get; set; }
+        public Guid Codigo { get; set; }
         public int EquipeId { get; set; }
         public virtual Equipe Equipe { get; set; }
+        public int LugarMesa { get; set; }
     }
 }
