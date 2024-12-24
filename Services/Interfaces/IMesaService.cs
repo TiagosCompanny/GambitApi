@@ -2,7 +2,7 @@
 
 public interface IMesaService
 {
-    void GerarRodada();
+    void EntrarMesa(string url);
 
-    void AguardarJogadores();
+    void IniciarPartida();
 }

@@ -2,6 +2,6 @@
 {
     public interface IJogadorService
     {
-        int SolicitarAumentoPontaacaoPartida(int quantidadePontosAtual = 1)
+        int SolicitarAumentoPontacaoPartida(int quantidadePontosAtual = 1);
     }
 }

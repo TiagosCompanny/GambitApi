@@ -8,7 +8,7 @@ namespace GambitApi.Services
     {
 
 
-        public int SolicitarAumentoPontaacaoPartida(int quantidadePontosAtual = 1)
+        public int SolicitarAumentoPontacaoPartida(int quantidadePontosAtual = 1)
         {
             int novaPontuacao = quantidadePontosAtual switch
             {
