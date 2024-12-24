@@ -1,6 +1,6 @@
 ﻿namespace GambitApi.Entities.Enums
 {
-    public enum ValorCarta
+    public enum EValorCarta
     {
         Quatro = 0,
         Cinco = 1,
