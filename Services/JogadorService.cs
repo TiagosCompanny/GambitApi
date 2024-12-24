@@ -1,13 +1,14 @@
-﻿using Microsoft.Extensions.Logging.Console;
+﻿using GambitApi.Services.Interfaces;
+using Microsoft.Extensions.Logging.Console;
 using System.Reflection.Metadata.Ecma335;
 
-namespace GambitApi.Services.Jogador
+namespace GambitApi.Services
 {
     public class JogadorService : IJogadorService
     {
 
 
-        public int SolicitarAumentoPontaacaoPartida(int quantidadePontosAtual = 1)
+        public int SolicitarAumentoPontacaoPartida(int quantidadePontosAtual = 1)
         {
             int novaPontuacao = quantidadePontosAtual switch
             {
@@ -23,7 +24,7 @@ namespace GambitApi.Services.Jogador
 
         public int ResponderSolicitacaoAumentoPontuacaoPartida()
         {
-            
+
 
 
 
