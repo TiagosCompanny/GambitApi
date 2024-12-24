@@ -1,7 +1,6 @@
 ﻿using GambitApi.Entities;
 using GambitApi.Entities.Enums;
-using System.Collections.Generic;
-using System.IO.Pipelines;
+using System;
 
 namespace GambitApi.Services.Cards
 {
@@ -26,14 +25,24 @@ namespace GambitApi.Services.Cards
             return new List<Carta>();
         }
 
-        public List<List<Carta>> GerarCartasRodada(int jogadores)
+        public Carta DefinirManilha()
+        {
+            var baralho = GerarBaralho();
+            var cartaVirada = baralho[new Random().Next(baralho.Count)];
+            return cartaVirada;
+        }
+
+        public List<List<Carta>> GerarCartasRodada(int jogadores, Carta cartaVirada)
         {
             if (jogadores % 2 == 0) throw new Exception("A mesa deve ter um numero par de jogadores");
 
             int quantidadeCartasPorJogador = 3;
             var baralho = GerarBaralho();
-            var random = new Random();
 
+            //Remover a carta que foi virada
+            baralho.Remove(cartaVirada);
+
+            var random = new Random();
             List<List<Carta>> cartasRodada = new List<List<Carta>>();
 
             for (int i = 0; i < jogadores; i++)
@@ -53,6 +62,24 @@ namespace GambitApi.Services.Cards
             }
 
             return cartasRodada;
+        }
+
+        public List<Carta> RetornarCartasMaiores(List<Carta> listaCartas, EValorCarta valorManilha)
+        {
+
+            // Verificar se há manilhas
+            var cartasManilha = listaCartas.Where(carta => carta.ValorCarta == valorManilha).ToList();
+
+            if (cartasManilha.Any()) // Se houver manilhas, desempatar por naipe
+            {
+                var maiorNaipe = cartasManilha.Max(carta => carta.Naipe); // Maior naipe entre as manilhas
+                return cartasManilha.Where(carta => carta.Naipe == maiorNaipe).ToList();
+            }
+
+            // Caso não haja manilhas, retornar todas as cartas com o maior valor
+            var maiorValor = listaCartas.Max(carta => carta.ValorCarta);
+            return listaCartas.Where(carta => carta.ValorCarta == maiorValor).ToList();
+
         }
 
     }
